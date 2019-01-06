@@ -41,8 +41,9 @@ export const calendarTemplate = `
                      (click)="selectDate(day)"
                      [ngClass]="{ today: day.today, active: day.active, selected: isActive(day) }">
                     <span>{{ day.mDate.jDate() | toPersian }}</span>
-                </div>
+                </div>                
             </div>
+            <button (click)="ngGoToday()">برو به امروز</button>
         </div>
     </div>
 `;

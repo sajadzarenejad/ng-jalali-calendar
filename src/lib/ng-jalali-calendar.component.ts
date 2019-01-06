@@ -43,6 +43,11 @@ export class NgJalaliCalendarComponent implements OnInit, OnChanges {
         return index !== -1;
     }
 
+    ngGoToday(){
+        this.initCalendar();
+        this.generateCalendar();
+    }
+
     ngOnInit () {
         this.initCalendar();
         this.generateCalendar();

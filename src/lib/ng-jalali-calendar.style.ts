@@ -23,7 +23,16 @@ export const calendarStyles = `
 }
 .calendar__body {
   margin-top: 20px;
+  position:relative
 }
+
+.calendar__body button {
+  position:absolute;
+  left:20px;
+  bottom:5px;
+  height:25px
+}
+
 .day-names {
   display: flex;
   background: #424242;
