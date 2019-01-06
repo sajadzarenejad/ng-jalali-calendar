@@ -93,13 +93,18 @@ export class ExampleComponent implements OnInit {
 	  
     onSelectDate(event: string) { 
 		this.selectedDate = event;  
-    }  
+    }
+    
+    goToday(today) {
+    	//user today date
+    }
 }
 ```
 
 ```html
 <ng-jalali-calendar 
-	(dateSelected)="onSelectDate($event)" 
+	(dateSelected)="onSelectDate($event)"
+	(goToDay)="goToday($event)" 
 	[selectedDates]="selectedDates"></ng-jalali-calendar>
 ```
 
