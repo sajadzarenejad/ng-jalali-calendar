@@ -24,6 +24,7 @@ export class NgJalaliCalendarComponent implements OnInit, OnChanges {
 
     @Input()  selectedDates: string[] = [];
     @Output() dateSelected: EventEmitter<string> = new EventEmitter<string>(true);
+    @Output() goToDay: EventEmitter<string> = new EventEmitter<string>(true);
 
     constructor () { }
 
@@ -46,6 +47,7 @@ export class NgJalaliCalendarComponent implements OnInit, OnChanges {
     ngGoToday(){
         this.initCalendar();
         this.generateCalendar();
+        this.goToDay.emit(this.currentDate.format('jYYYY/jMM/jDD'));
     }
 
     ngOnInit () {
